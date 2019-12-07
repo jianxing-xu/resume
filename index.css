@@ -24,7 +24,7 @@ li.dot::before{
   background-color: #ae4a55;
   position: absolute;
   left: 5px;
-  top: 7px;
+  top: 9px;
   content: '';
 }
 .wrapper {
