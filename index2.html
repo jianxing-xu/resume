@@ -12,15 +12,13 @@
 
 <body>
   <div class="wrapper">
-    <!--start-->
     <div class="wrapper-inner">
-      <div class="header" style="margin-bottom:20px">
+      <div class="header">
         <h1 class="you-name">许健兴</h1>
-        <h2 class="target">
+        <h2 class="target" style="margin-bottom: 15px;">
           <span>求职目标：前端工程师</span>
-          <a onclick="preview()">下载PDF</a>
+          <a onclick="window.print()">下载PDF</a>
         </h2>
-        <h2 class="target" style="margin-bottom: 15px;">宜春学院（本科）计算机科学与技术</h2>
         <ul class="base-info">
           <li>
             <i class="theme iconfont icon-dianhua"></i>
@@ -37,12 +35,13 @@
         </ul>
       </div>
       <div class="body">
-        <!-- <section class="block school">
+        <section class="block school">
           <h2 class="title">教育经历</h2>
           <ul class="list">
-
+            <li>2017-2020 江西农业工程职业学院（大专） 移动应用开发</li>
+            <li>2020-2022 宜春学院（本科）计算机科学与技术</li>
           </ul>
-        </section> -->
+        </section>
         <section class="block skill">
           <h2 class="title">专业技能</h2>
           <ul class="list">
@@ -156,6 +155,19 @@
             </li>
           </ul>
         </section>
+        <section class="block works-list">
+          <h2 class="title">工作经历</h2>
+          <ul class="list">
+            <li class="dot">
+              <div class="pro-item">
+                <h3 class="pro-name">2020.01 ~ 2020.09 杭州钛云科技有限公司 前端实习</h3>
+                <div class="detail">
+                  主要负责新业务开发和老项目维护
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
         <section class="block summary">
           <h2 class="title">个人总结</h2>
           <ul class="list">
@@ -172,20 +184,7 @@
       </div>
     </div>
 
-    <!--end-->
   </div>
-  <script>
-    function preview() {
-      // body = window.document.body.innerHTML;
-      // startpoint = "<!--start-->";
-      // endpoint = "<!--end-->";
-      // printdb = body.substring(body.indexOf(startpoint) + 17);
-      // printdb = printdb.substring(0, printdb.indexOf(endpoint));
-      // window.document.body.innerHTML = printdb;
-      window.print();
-      // window.document.body.innerHTML = body;
-    }
-  </script>
 </body>
 
 </html>
