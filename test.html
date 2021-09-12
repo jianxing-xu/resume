@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+  <style>
+    table tr:nth-child(2n) {
+      background: #999;
+    }
+
+    table tr:nth-child(2n-1) {
+      background: white;
+    }
+
+    table tr:hover {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>hello</td>
+    </tr>
+    <tr>
+      <td>hello</td>
+    </tr>
+    <tr>
+      <td>hello</td>
+    </tr>
+    <tr>
+      <td>hello</td>
+    </tr>
+    <tr>
+      <td>hello</td>
+    </tr>
+  </table>
+  <script></script>
+</body>
+<script>
+  var entry = {
+    "a.b.c.dd": "abcdd",
+    "a.d.xx": "adxx",
+    "a.e": "ae"
+  };
+  window.decodeObj = function decodeObj(obj) {
+    Object.keys(obj).map((k) => {
+      getNested(k);
+    });
+    console.log(obj);
+    return obj;
+
+    function getNested(key) {
+      const idx = key.lastIndexOf(".");
+      const value = obj[key];
+      if (~idx) {
+        // 先删除当前value值，后面做undefined判断
+        delete obj[key];
+        const mainKey = key.slice(0, idx);
+        const subKey = key.slice(idx + 1);
+        // 不是的话，代表这个对象中还有其他属性所以只要赋值其中一个就可以
+        if (obj[mainKey] != undefined) {
+          obj[mainKey][subKey] = value;
+        } else {
+          // 判断是否是undefined,是的话代表这个对象中没有其他属性了只有一个属性
+          obj[mainKey] = { [subKey]: value };
+        }
+
+        if (/\./.test(mainKey)) {
+          getNested(mainKey);
+        }
+      }
+    }
+  }
+
+  window.encodeObj = function encodeObj(obj) {
+    const keyArr = [];
+    const newObj = {};
+    const _c = function (o) {
+      for (let key in o) {
+        let value = o[key];
+        keyArr.push(key);
+        if (typeof value == 'object') {
+          _c(value);
+        } else {
+          newObj[keyArr.join(".")] = value;
+        }
+        keyArr.pop();
+      }
+    }
+    _c(obj);
+    return newObj;
+  }
+
+  window.deepClone = function (origin) {
+    var clone = Array.isArray(origin) ? [] : {};
+    for (let key in origin) {
+      if (origin.hasOwnProperty(key)) {
+        if (typeof origin[key] === 'object') {
+          clone[key] = deepClone(origin[key]);
+        } else {
+          clone[key] = origin[key];
+        }
+      }
+    }
+    return clone;
+  }
+
+  window.Xtask = function () {
+    this.list = [];
+    this.mins = [];
+    this.push = function (...values) {
+      this.mins.push(...values);
+      this.mins.sort((a, b) => a - b);
+      this.list.push(...values);
+    }
+    this.pop = function () {
+      const value = this.list.pop();
+      this.mins.splice(this.mins.findIndex(item => item === value), 1);
+    }
+    this.getMin = function () {
+      return this.mins[0];
+    }
+  }
+  const task = new Xtask();
+</script>
+
+</html>
