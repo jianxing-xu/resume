@@ -1,0 +1,20 @@
+{
+  "name": "resume-git",
+  "version": "1.0.0",
+  "description": "## 以一种吹牛逼的方式表达技术 ## 简历中工作项目描述   + 分点描述     + 负责什么     + 用xxx技术解决了xx问题     + 达到了xxx样的效果",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xjx-me/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xjx-me/resume/issues"
+  },
+  "homepage": "https://github.com/xjx-me/resume#readme"
+}

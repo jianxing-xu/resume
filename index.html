@@ -3,205 +3,136 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>许健兴-web前端-phone:18370014984-wx:dbrond</title>
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1544432_520f5bqorp2.css">
-  <link rel="stylesheet" href="index.css">
+  <title>许健兴-web前端-18370014984-wechat:dbrond</title>
+  <link rel=" stylesheet " href=" https://cdn.jsdelivr.net/npm/@unocss/reset/normalize.min.css">
+  <script>
+    // 传递 unocss 选项
+    window.__unocss = {
+      rules: [
+        ['pc', { color: '#ae4a55' }],
+      ]
+    }
+  </script>
+  <script src=" https://cdn.jsdelivr.net/npm/@unocss/runtime/attributify.global.js "> </script>
+  <style>
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 20px 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    t {
+      font-weight: bold;
+      color: #ae4a55;
+    }
+  </style>
 </head>
 
-<body>
-  <div class="wrapper">
-    <!--start-->
-    <div class="wrapper-inner">
-      <div class="header" style="margin-bottom:20px">
-        <h1 class="you-name">许健兴</h1>
-        <h2 class="target">
-          <span>求职目标：前端工程师</span>
-          <a onclick="preview()">下载PDF</a>
-        </h2>
-        <h2 class="target" style="margin-bottom: 15px;">宜春学院（本科）计算机科学与技术</h2>
-        <ul class="base-info">
-          <li>
-            <i class="theme iconfont icon-dianhua"></i>
-            <span class="theme">18370014984</span>
-          </li>
-          <li>
-            <i class="theme iconfont icon-dianziyoujian"></i>
-            <span class="theme">xjx_me@yeah.net</span>
-          </li>
-          <li>
-            <i class="theme iconfont">wx:</i>
-            <span class="theme">dbrond</span>
-          </li>
+<body bg-gray-500 text-size-4 font-normal text-gray-700 py-10>
+  <main w-200 min-h-100 bg-white shadow p-8 mx-auto>
+    <header items-center gap-6 relative>
+      <div text-size-14 font-normal inline-block>许健兴</div>
+      <div flex-col gap text-5 inline-block ml-2>
+        <li>前端工程师</li>
+        <li pt-1>宜春学院（本科）计算机科学与技术</li>
+      </div>
+      <div onclick="window.print()" inline-block font-black absolute right-0 top-4 border-solid border-4 rounded p-2
+        cursor-pointer>Download
+        PDF</div>
+      <div border-solid pc rounded my-3 border-2></div>
+      <div flex text-4 justify-between mt-2 px-2 font-black>
+        <li pc>tel: 18370014984</li>
+        <li pc>email: xjx_me@yeah.net</li>
+        <li pc>wx: dbrond</li>
+      </div>
+    </header>
+    <div border-solid pc rounded my-3 border-2></div>
+    <section>
+      <h1>专业技能</h1>
+      <ul flex flex-col gap-2 pl-4>
+        <li>熟悉<b pc> JavaScript、HTML5、CSS3 </b>以及 <b pc> ES6+ </b>语法</li>
+        <li>掌握常用前端框架<b pc> Vue2/3 </b>，及其全家桶和周边生态</li>
+        <li>了解 <b pc> React </b>框架，了解 <b pc> React Hooks </b>的基本使用</li>
+        <li>了解 <b pc> HTTP / 浏览器缓存 / 跨域请求 </b>等</li>
+        <li>了解 <b pc> Webpack </b>基本配置，及其<b pc>plugin、loader</b>的使用</li>
+        <li>了解 <b pc> Git </b>常用命令，进行团队协作开发</li>
+      </ul>
+    </section>
+    <section>
+      <h1>项目</h1>
+      <div pl-4>
+        <h3>音乐聊天室 <a pc href="http://106.15.137.156/rondo" target="_blank">点击预览</a></h3>
+        <ul pl-4 flex flex-col gap-2>
+          <li><b>项目描述: </b>使用React实现的一个在线聊天、听歌、点歌平台，可以创建自己的房间。</li>
+          <li font-bold>相关技术:</li>
+          <li>1. 主要使用 <t>React</t> 框架，Hox作为全局状态管理.</li>
+          <li>2. 使用 <t>Tailwindcss</t> 编写样式</li>
+          <li>3. 使用 <t>Websocket</t> 来向前端推送消息实现房间聊天</li>
+          <li>4. 后端采用Springboot、Mysql、Redis、<t>JWT</t>认证机制，NettyWebsocket作为服务端Websocket实现</li>
         </ul>
       </div>
-      <div class="body">
-        <!-- <section class="block school">
-          <h2 class="title">教育经历</h2>
-          <ul class="list">
-
-          </ul>
-        </section> -->
-        <section class="block skill">
-          <h2 class="title">专业技能</h2>
-          <ul class="list">
-            <li>掌握 <span class="theme">JavaScript、HTML5、CSS3</span> ，掌握 <span class="theme">ES6</span> 常用语法；</li>
-            <li>掌握 常用开发框架<span class="theme">Vue</span>，能使用 <span class="theme">Vue2/3、Vuex、Vue-Router，熟练Vue指令</span> ；
-            </li>
-            <li>掌握 <span class="theme">React</span> 框架，及对应生态包括但不限于 <span class="theme">React Router</span>、<span
-                class="theme">Redux</span>；</li>
-            <li>熟悉 W3C标准，<span class="theme">了解 HTML5 语义化，CSS盒模型；</span></li>
-            <li>掌握<span class="theme">Flex弹性盒子</span> ，利用 <span class="theme">rem</span>和百分比进行移动端布局；</li>
-            <li>掌握 Less、Sass 等CSS预处理语言；</li>
-            <li>掌握 高效的 http 请求库 <span class="theme">axios</span>，并对其进行封装使用；</li>
-            <li>了解 <span class="theme">HTTP</span> 基础，跨域请求，浏览器缓存等；</li>
-            <li>能使用Element UI & AntDesign 组件库，及对应移动端组件库，能使用jQuery进行开发；</li>
-            <li>掌握Git基本操作；</li>
-            <li>有使用uni-app开发过小程序；</li>
-          </ul>
-        </section>
-        <section class="block works">
-          <h2 class="title">作品</h2>
-          <ul class="works-list">
-            <li class="dot">
-              <div class="pro-item">
-                <h3 class="pro-name">点歌台(PC端)</h3>
-                <div class="detail">
-                  <h4><a href="http://49.235.175.45/rondo" target="_blank"><span class="theme">预览地址⬅</span></a></h4>
-                  <h4>项目描述:</h4>
-                  <p>一个基于 Vite + React + TS 的在线点歌听歌，聊天摸鱼的平台，可以点歌，创建房间聊天。</p>
-                  <h4>相关技术: </h4>
-                  <p>1. <span class="theme">React、TS、Vite</span></p>
-                  <p>2. 项目中采用了 <span class="theme">umi家的hox</span> 作为全局状态管理，全面拥抱<span class="theme">hooks</span>的状态管理
-                  </p>
-                  <p>3. 采用<span class="theme">WebSocket</span>进行消息主动推送</p>
-                  <p>4. 后端采用Springboot、Mysql、Redis、JWT，NettyWebsocket</p>
-                </div>
-              </div>
-            </li>
-            <li class="dot">
-              <div class="pro-item">
-                <h3 class="pro-name">个人博客</h3>
-                <div class="detail">
-                  <h4><a href="http://49.235.175.45:3002/" target="_blank"><span class="theme">前台预览地址⬅</span></a></h4>
-                  <h4><a href="http://49.235.175.45:3001/" target="_blank"><span class="theme">后台预览地址⬅</span></a></h4>
-                  <h4>项目描述:</h4>
-                  <p>一个基于 Next.js + React + TS 博客平台</p>
-                  <h4>相关技术: </h4>
-                  <p>1. <span class="theme">React、TS、Next.js SSR</span></p>
-                  <p>2. 后端采用 Node 的上层框架 Nest.js 开发，数据库 Mysql </p>
-                  </p>
-                  <p>服务器被黑过一次，仅存的几篇博客莫得了</p>
-                </div>
-              </div>
-            </li>
-            <li class="dot">
-              <div class="pro-item">
-                <h3 class="pro-name">一个音乐(移动端)</h3>
-                <div class="detail">
-                  <h4><a href="http://49.235.175.45/music" target="_blank"><span class="theme">预览地址⬅</span></a></h4>
-                  <h4>项目描述:</h4>
-                  <p>一个基于 Vue2.x 的在线音乐播放器，有首页歌单，歌手，排行，MV，搜索，个人中心几大板块</p>
-                  <h4>相关技术: </h4>
-                  <p>1. Vue 全家桶，<span class="theme">axios</span> ，better-scroll</p>
-                  <p>2. 项目中采用了 <span class="theme">Vuex</span> 作为全局状态管理，解决了隔代组件通信的问题 </p>
-                  <p>3. 利用 better-scroll 封装了全局滚动组件，以更好的处理滚动中的问题 </p>
-                  <p>4. 采用了防抖函数( <span class="theme">debounce</span> ) 对搜索框进行了处理，以减少请求次数，提高性能</p>
-                  <p>5. 采用<span class="theme">rem</span>自适应布局对移动端进行适配，以应对在不同尺寸大小的的屏幕上的表现</p>
-                  <p>6. 利用localStorage的本地存储，解决了保存歌曲的播放历史、搜索历史等</p>
-                  <p>7. 在nginx中开启了gzip压缩，加快了首屏的响应速度</p>
-                </div>
-              </div>
-            </li>
-            <li class="dot">
-              <div class="pro-item">
-                <h3 class="pro-name">简便签(移动端)</h3>
-                <div class="detail">
-                  <h4><a href="https://xjx-me.github.io/vue-note/#/home" target="_blank"><span
-                        class="theme">预览地址⬅</span></a></h4>
-                  <h4>项目描述:</h4>
-                  <p>一个基于 Vue 的移动端便签应用</p>
-                  <h4>相关技术: </h4>
-                  <p>Vue，采用 <span class="theme">localStorage</span> 进行本地存储
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="dot">
-              <div class="pro-item">
-                <h3 class="pro-name">爱涂鸦(PC端)</h3>
-                <div class="detail">
-                  <h4><a href="https://xjx-me.github.io/Graffiti-Board" target="_blank"><span
-                        class="theme">预览地址⬅</span></a></h4>
-                  <h4>项目描述:</h4>
-                  <p>原生JavaScript涂鸦板</p>
-                  <h4>相关技术: </h4>
-                  <p> Canvas , 给线条阴影和模糊减轻了线条的锯齿感，加强了笔触的流畅度，提高体验</p>
-                </div>
-              </div>
-            </li>
-            <li class="dot">
-              <div class="pro-item">
-                <h3 class="pro-name">随心翻译(微信小程序)</h3>
-                <div class="detail">
-                  <h4 class="qrcode-title">
-                    <img src="./img/qrcode.jpg" width="100" height="100" alt="">
-                    <h4>项目描述:</h4>
-                    <p>使用uni-app开发的翻译微信小程序</p>
-                    <h4>相关技术: </h4>
-                    <p> Vue.js ，使用的是百度开放平台的通用翻译API </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section class="block works-list">
-          <h2 class="title">实习经历</h2>
-          <ul class="list">
-            <li class="dot">
-              <div class="pro-item">
-                <h3 class="pro-name">2020.01 ~ 2020.09 杭州钛云科技有限公司 前端实习</h3>
-                <div class="detail">
-                  主要负责新业务开发和老项目维护,给公司老项目添加了一键部署服务。<br>
-                  项目一：众筹平台管理后台 <br>
-                  项目二：众筹平台前台
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section class="block summary">
-          <h2 class="title">个人总结</h2>
-          <ul class="list">
-            <li>热爱学习，热爱coding</li>
-            <li>追求新技术，喜欢技术分享，善于总结</li>
-            <li>对事认真负责</li>
-            <li>GitHub: <a href="https://github.com/xjx-me" target="_blank"><span class="theme">xjx-me</span></a></li>
-            <li>Gitee: <a href="https://gitee.com/xujiangxing" target="_blank"><span class="theme">xujianxing</span></a>
-            </li>
-            <!-- <li>hexoBlog: <a href="https://xujianxing.top" target="_blank"><span class="theme">許秈8980</span></a></li> -->
-          </ul>
-        </section>
+      <div pl-4>
+        <h3>简便签 <a pc href="https://xjx-me.github.io/vue-note/#/home" target="_blank">点击预览</a></h3>
+        <ul pl-4 flex flex-col gap-2>
+          <li><b>项目描述: </b>使用Vue2编写的一个移动端便签应用</li>
+          <li font-bold>相关技术:</li>
+          <li>1. 使用了 <t>Vue2</t> 框架实现.</li>
+          <li>2. localStorage存储便签数据</li>
+        </ul>
+      </div>
+      <div pl-4>
+        <h3>爱涂鸦 <a pc href="https://xjx-me.github.io/vue-note/#/home" target="_blank">点击预览</a></h3>
+        <ul pl-4 flex flex-col gap-2>
+          <li><b>项目描述: </b>使用原生JS实现的涂鸦板</li>
+          <li font-bold>相关技术:</li>
+          <li>1. 使用 Canvas 实现, 给线条阴影和模糊减轻了线条的锯齿感，加强了笔触的流畅度，提高体验</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h1>实习经历</h1>
+      <div pl-4>
+        <h3>2021.9-2022.4 杭州砥石网络科技 前端开发工程师（实习）</h3>
+        <p><b>工作描述：</b>参与公司产品的前端研发工作，主要技术栈为<t>Vue2/3</t>。</p>
+        <div><b>项目一 <t>Desty Store</t></b></div>
+        <div pl-4>
+          <div my-2 lh-6><b>项目描述：</b>Desty.store 是一个电商平台，卖家可以搭建自己个性化的独立站店铺，能管理商品、物流等。<br>
+            Desty.store 买家端可以访问卖家搭建的独立站进行交易。</div>
+          <li py-1>* 项目主要使用Vue2，Seller端使用Elementui，Buyer端使用Quasar搭建</li>
+          <li py-1>* 通过immer库封装了店铺装修数据的修改</li>
+        </div>
+        <div mt-4><b>项目二 <t>Desty Menu</t></b></div>
+        <div pl-4>
+          <div my-2 lh-6><b>项目描述：</b>Desty.menu 是一个在线点餐平台，买家下单后，卖家会收到实时订单通知，通过websocket实现</div>
+          <li py-1>* 主要负责Seller端的业务迭代，公共组件封装，公共Hooks封装</li>
+          <li py-1>* 封装了GoogleMap组件</li>
+          <li py-1>* 通过websocket实现实时订单推送</li>
+        </div>
 
       </div>
-    </div>
-
-    <!--end-->
-  </div>
-  <script>
-    function preview() {
-      // body = window.document.body.innerHTML;
-      // startpoint = "<!--start-->";
-      // endpoint = "<!--end-->";
-      // printdb = body.substring(body.indexOf(startpoint) + 17);
-      // printdb = printdb.substring(0, printdb.indexOf(endpoint));
-      // window.document.body.innerHTML = printdb;
-      window.print();
-      // window.document.body.innerHTML = body;
-    }
-  
-  </script>
+    </section>
+    <section>
+      <h1>个人总结</h1>
+      <ul flex flex-col gap-2 pl-4>
+        <li>热爱学习，热爱coding</li>
+        <li>要求自己写出健壮性强，可维护的代码</li>
+        <li>对事认真负责</li>
+        <li flex gap-4>
+          <a pc href="https://github.com/xjx-me" target="_blank"><span class="theme">GitHub: xjx-me</span></a>
+          <a pc href="https://gitee.com/xujiangxing" target="_blank"><span class="theme">Gitee: xujianxing</span></a>
+          <a pc href="https://juejin.cn/user/870468941523527" target="_blank"><span class="theme">掘金: 许</span></a>
+        </li>
+      </ul>
+    </section>
+    <footer></footer>
+  </main>
 </body>
 
 </html>
