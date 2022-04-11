@@ -35,7 +35,7 @@
   </style>
 </head>
 
-<body bg-gray-500 text-size-4 font-normal text-gray-700 py-10>
+<body bg-gray-500 text-size-4 font-normal text-gray-700 py-10 relative>
   <main w-200 min-h-100 bg-white shadow p-8 mx-auto>
     <header items-center gap-6 relative>
       <div text-size-14 font-normal inline-block>许健兴</div>
@@ -48,9 +48,9 @@
         PDF</div>
       <div border-solid pc rounded my-3 border-2></div>
       <div flex text-4 justify-between mt-2 px-2 font-black>
-        <li pc>tel: 18370014984</li>
-        <li pc>email: xjx_me@yeah.net</li>
-        <li pc>wx: dbrond</li>
+        <li pc><span select-none>tel: </span>18370014984</li>
+        <li pc><span select-none>email: </span>xjx_me@yeah.net</li>
+        <li pc><span select-none>wx: </span>dbrond</li>
       </div>
     </header>
     <div border-solid pc rounded my-3 border-2></div>
@@ -70,11 +70,11 @@
       <div pl-4>
         <h3>音乐聊天室 <a pc href="http://106.15.137.156/rondo" target="_blank">点击预览</a></h3>
         <ul pl-4 flex flex-col gap-2>
-          <li><b>项目描述: </b>使用React实现的一个在线聊天、听歌、点歌平台，可以创建自己的房间。</li>
+          <li><b>项目描述: </b>使用React实现的一个在线聊天、听歌、点歌平台，可以创建自己的房间，每个房间都有自己单独的歌曲队列，互不影响。</li>
           <li font-bold>相关技术:</li>
-          <li>1. 主要使用 <t>React</t> 框架，Hox作为全局状态管理.</li>
-          <li>2. 使用 <t>Tailwindcss</t> 编写样式</li>
-          <li>3. 使用 <t>Websocket</t> 来向前端推送消息实现房间聊天</li>
+          <li>1. 主要使用 <t>React</t> 框架，Hox作为全局状态管理，解决了组件间状态共享的问题</li>
+          <li>2. 使用 原子化Css解决方案 <t>Tailwindcss</t> 编写样式，解决了可以让我们不用编写冗长的css代码问题</li>
+          <li>3. 使用 <t>Websocket</t> 来向前端推送消息实现房间聊天，和房间内的各种通知，比如被`@`了，有人为你点歌了等。</li>
           <li>4. 后端采用Springboot、Mysql、Redis、<t>JWT</t>认证机制，NettyWebsocket作为服务端Websocket实现</li>
         </ul>
       </div>
@@ -85,6 +85,7 @@
           <li font-bold>相关技术:</li>
           <li>1. 使用了 <t>Vue2</t> 框架实现.</li>
           <li>2. localStorage存储便签数据</li>
+          <li>3. 使用 document.execCommand API实现简单的富文本编辑功能</li>
         </ul>
       </div>
       <div pl-4>
@@ -105,17 +106,31 @@
         <div pl-4>
           <div my-2 lh-6><b>项目描述：</b>Desty.store 是一个电商平台，卖家可以搭建自己个性化的独立站店铺，能管理商品、物流等。<br>
             Desty.store 买家端可以访问卖家搭建的独立站进行交易。</div>
-          <li py-1>* 项目主要使用Vue2，Seller端使用Elementui，Buyer端使用Quasar搭建</li>
-          <li py-1>* 通过immer库封装了店铺装修数据的修改</li>
+          <li py-1>* 项目主要使用<t>Vue2</t>，Seller端使用ElementUI，Buyer端使用Quasar搭建</li>
+          <li py-1>* 修改<t>ElementUI Form</t>表单源码实现异步校验异常立即返回错误状态</li>
+          <li py-1>* 通过<t>immer.js</t>库封装了店铺装修数据的修改，实现在组件中只需要传递路径和值就可以修改</li>
         </div>
         <div mt-4><b>项目二 <t>Desty Menu</t></b></div>
         <div pl-4>
           <div my-2 lh-6><b>项目描述：</b>Desty.menu 是一个在线点餐平台，买家下单后，卖家会收到实时订单通知，通过websocket实现</div>
-          <li py-1>* 主要负责Seller端的业务迭代，公共组件封装，公共Hooks封装</li>
+          <li py-1>* 主要负责Seller端的业务迭代，公共组件封装，公共<t>Hooks</t>封装</li>
           <li py-1>* 封装了GoogleMap组件</li>
+          <li py-1>* 编写脚本实现翻译语言包和CSV文件的互相转化</li>
           <li py-1>* 通过websocket实现实时订单推送</li>
         </div>
 
+      </div>
+    </section>
+    <section>
+      <h1>教育经历</h1>
+      <ul pl-4>
+        <li my-2>宜春学院（本科）计算机科学与技术 - 2020~2022</li>
+        <li my-2>江西农业工程职业学院 (大专) 移动应用开发 - 2017~2020</li>
+      </ul>
+      <div pl-6>
+        <div pb-2 bold><b>校内经历</b></div>
+        <li>* 江西省信息技术大赛本科专业组一等奖</li>
+        <li>* 江西省信息技术大赛专科专业组一等奖</li>
       </div>
     </section>
     <section>
@@ -124,15 +139,21 @@
         <li>热爱学习，热爱coding</li>
         <li>要求自己写出健壮性强，可维护的代码</li>
         <li>对事认真负责</li>
-        <li flex gap-4>
-          <a pc href="https://github.com/xjx-me" target="_blank"><span class="theme">GitHub: xjx-me</span></a>
-          <a pc href="https://gitee.com/xujiangxing" target="_blank"><span class="theme">Gitee: xujianxing</span></a>
-          <a pc href="https://juejin.cn/user/870468941523527" target="_blank"><span class="theme">掘金: 许</span></a>
+        <li flex gap-4 flex-col>
+          <a pc href="https://github.com/xjx-me" target="_blank"><span class="theme">GitHub: github.com/xjx-me</span></a>
+          <a pc href="https://gitee.com/xujiangxing" target="_blank"><span class="theme">Gitee: gitee.com/xujianxing</span></a>
+          <a pc href="https://juejin.cn/user/870468941523527" target="_blank"><span class="theme">掘金: https://juejin.cn/user/870468941523527</span></a>
         </li>
       </ul>
     </section>
-    <footer></footer>
+    <footer mt-20>
+      <p>感谢您阅读我的简历！</p>
+      期待与您一起共事！
+    </footer>
   </main>
+
+
+  <div fixed bottom-4 right-4 text-sm scale-20 text-gray-50>css power by unocss</div>
 </body>
 
 </html>
