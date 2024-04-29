@@ -1,4 +1,4 @@
-import { ID } from './lang.js'
+import { ID } from './language/lang.js'
 
 // 还原obj对象
 export function decodeObj(obj) {
@@ -46,8 +46,10 @@ export function expandObj(obj) {
         tempObj = tempObj[key];
       }
     }
+    // 删除obj中带.的属性
     if (~k.indexOf('.')) delete obj[k];
     tempObj = obj;
+    console.log(tempObj)
   }
   return tempObj;
 }
@@ -101,13 +103,16 @@ const normalObj = {
 }
 
 
-console.time('TEST_DECODE ME');
-flatObj(ID);
-console.timeEnd('TEST_DECODE ME')
+// console.time('TEST_DECODE ME');
+// flatObj(ID);
+// console.timeEnd('TEST_DECODE ME')
 
 
-console.time('TEST_DECODE');
-encodeObj(ID);
-console.timeEnd('TEST_DECODE')
+// console.time('TEST_DECODE');
+// encodeObj(ID);
+// console.timeEnd('TEST_DECODE')
+
+console.log(expandObj(obj))
+
 
 

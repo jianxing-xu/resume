@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Arrange {
+      name;
+      queue = [];
+      constructor(name) {
+        this.name = name;
+        this.queue.push(() => new Promise((resolve) => {
+          console.log(this.name, "notifed");
+          resolve();
+        }))
+      }
+      wait(second = 1) {
+        this.queue.push(() => new Promise((resolve) => {
+          console.log(`等待..${second}s`)
+          setTimeout(() => resolve(), second * 1000);
+        }))
+        return this
+      }
+      do(doMsg) {
+        this.queue.push(() => new Promise((resolve) => {
+          console.log("Start to " + doMsg)
+          resolve();
+        }))
+        return this;
+      }
+      excute() {
+        if (!this.queue.length) return;
+        const task = this.queue.shift();
+        task().then(() => this.excute());
+      }
+    }
+    const arrange = new Arrange("william");
+    arrange.wait(5).do("commit").wait(3).do("push").excute();
+  </script>
+</body>
+
+</html>

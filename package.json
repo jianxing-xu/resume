@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/xjx-me/resume/issues"
   },
-  "homepage": "https://github.com/xjx-me/resume#readme"
+  "homepage": "https://github.com/xjx-me/resume#readme",
+  "dependencies": {
+    "webpack": "^5.91.0"
+  }
 }
